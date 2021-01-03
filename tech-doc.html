@@ -9,6 +9,142 @@
 
 <body>
 
+    <nav id="navbar">
+        <header>CSS documentation: Basics</header>
+        <ul>
+            <a href="#What-is-CSS" class="nav-link">
+                <li>What is CSS</li>
+            </a>
+            <a href="#Anatomy-of-CSS-ruleset" class="nav-link">
+                <li>Anatomy of CSS ruleset</li>
+            </a>
+            <a href="#CSS-Selectors" class="nav-link">
+                <li>CSS Selectors</li>
+            </a>
+            <a href="#Font" class="nav-link">
+                <li>Font</li>
+            </a>
+            <a href="#CSS:-all-about-boxes" class="nav-link">
+                <li>CSS: all about boxes</li>
+            </a>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+        <p class="intro">CSS (Cascading Style Sheets) is the code that styles web content. <i>CSS</i> basics walks
+            through what
+            you need to get started. We'll answer questions like: How do I make text red? How do I make content display
+            at a certain location in the (webpage) layout? How do I decorate my webpage with background images and
+            colors?</p>
+
+        <section class="main-section" id="What-is-CSS">
+            <header>What is CSS</header>
+            <p>Like HTML, CSS is not a programming language. It's not a markup language either. <b>CSS is a style sheet
+                    language.</b> CSS is what you use to selectively style HTML elements. For example, this CSS selects
+                paragraph text, setting the color to red:</p>
+            <code>p { color: red; } </code>
+        </section>
+
+        <section class="main-section" id="Anatomy-of-CSS-ruleset">
+            <header>Anatomy of CSS ruleset</header>
+
+            <p>Let's dissect the CSS code for red paragraph text to understand how it works :</p>
+            <img src="https://mdn.mozillademos.org/files/9461/css-declaration-small.png"
+                alt="CSS p declaration color red">
+            <p>The whole structure is called a <b>ruleset.</b> (The term <i>ruleset</i> is often referred to as just
+                <i>rule</i>.) Note the
+                names of the individual parts:
+            </p>
+            <h4><b>Selector</b></h4>
+            <p>This is the HTML element name at the start of the ruleset. It defines the element(s) to be styled (in
+                this example, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p">&lt;p&gt;</a>
+                elements). To style a different element, change the selector.</p>
+
+            <h4><b>Declaration</b></h4>
+            <p>This is a single rule like <code>color: red;</code>. It specifies which of the element's properties you
+                want to style.</p>
+
+            <h4><b>Properties</b></h4>
+            <p>These are ways in which you can style an HTML element. (In this example, color is a property of the <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p">&lt;p&gt;</a> elements.) In CSS,
+                you choose which properties you want to affect in the rule.</p>
+
+            <h4><b>Prperty value</b></h4>
+            <p>To the right of the property—after the colon—there is the <b>property value</b>. This chooses one out of
+                many possible appearances for a given property. (For example, there are many color values in addition to
+                red.)</p>
+
+            <p>Note the other important parts of the syntax:</p>
+            <ul>
+                <li>Apart from the selector, each ruleset must be wrapped in curly braces. ({})</li>
+                <li>Within each declaration, you must use a colon (:) to separate the property from its value or values.
+                </li>
+                <li>Within each ruleset, you must use a semicolon (;) to separate each declaration from the next one.
+                </li>
+            </ul>
+
+            <p>To modify multiple property values in one ruleset, write them separated by semicolons, like this:</p>
+            <code>p {
+                color: red;
+                width: 500px;
+                border: 1px solid black;
+              }</code>
+
+        </section>
+
+        <section class="main-section" id="CSS-Selectors">
+            <header>CSS Selectors</header>
+
+            <h4><b>Selecting Multiple Elements</b></h4>
+            <p>You can also select multiple elements and apply a single ruleset to all of them. Separate multiple
+                selectors by commas. For example:</p>
+            <code>p, li, h1 {
+                color: red;
+              }</code>
+
+            <h4><b>Different types of selectors</b></h4>
+            <p>There are many different types of selectors. The examples above use element selectors, which select all
+                elements of a given type. But we can make more specific selections as well. Here are some of the more
+                common types of selectors:</p>
+
+            <table>
+                <tr>
+                    <th>Selector name</th>
+                    <th>What does it select</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Element selector (sometimes called a tag or type selector)</td>
+                    <td>All HTML elements of the specified type.</td>
+                    <td><code>p
+                        selects &lt;p&gt; </code></td>
+                </tr>
+                <tr>
+                    <td>ID selector</td>
+                    <td>The element on the page with the specified ID. On a given HTML page, each id value should be
+                        unique.</td>
+                    <td><code>#my-id
+                        selects &lt;p id="my-id"&gt; or &lt;a id="my-id"&gt;</code></td>
+                </tr>
+            </table>
+            <p>There are many more selectors to discover. To learn more, see the MDN <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors">Selectors
+                    guide</a>.</p>
+
+        </section>
+
+        <section class="main-section" id="Font">
+            <header>Font</header>
+        </section>
+
+        <section class="main-section" id="CSS:-all-about-boxes">
+            <header>CSS: all about boxes </header>
+        </section>
+    </main>
+
+
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 </html>
